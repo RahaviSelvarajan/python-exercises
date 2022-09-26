@@ -24,3 +24,20 @@ def overdue_fees(days_late: int, age_group: str) -> float:
     >>> overdue_fees(5, ADULT) # 5 days late, ADULT borrower
     10
     """
+    if days_late < 4:
+        fees = days_late
+    elif 4 <= days_late <= 6:
+        fees = days_late * 2
+    else:
+        fees = days_late * 3
+    
+    if age_group == CHILD:
+        return fees / 2
+    elif age_group == SENIOR:
+        return 0.25 * fees
+    else:
+        return fees
+
+print(overdue_fees(2, SENIOR))
+
+print(overdue_fees(5, ADULT))
