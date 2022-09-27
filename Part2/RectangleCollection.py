@@ -58,6 +58,7 @@ class RectangleCollection:
         """
         
         # your code goes here
+        return self.rectangles.append(rectangle)
 
     def get_same_area_rects(self, area: int) -> List["Rectangle"]:
         """
@@ -75,5 +76,20 @@ class RectangleCollection:
         results = []
         
         # your code goes here.
+        for index, rectangle in enumerate(self.rectangles):
+            if rectangle.get_area() == area:
+                results.append('r'+str(index))
         
         return results
+    
+    # def __repr__():
+        
+
+rc = RectangleCollection()
+r1 = Rectangle(1,2)
+r2 = Rectangle(2,2)
+r3 = Rectangle(4,1)
+rc.add_rectangle(r1)
+rc.add_rectangle(r2)
+rc.add_rectangle(r3)
+print(rc.get_same_area_rects(4))

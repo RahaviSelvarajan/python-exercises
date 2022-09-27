@@ -24,3 +24,7 @@ class Rectangle:
         """
 
         return self.width * self.height
+
+
+r = Rectangle(1.5, 2.7)
+print(r.area())
