@@ -24,7 +24,11 @@ def reverse_lookup_lists(phone_num: str, phone_numbers: List[str],
         'Louis Riel', 'Canoe Head', 'Tim Horton'])
     'Canoe Head'
     """
-    return names[phone_numbers.index(phone_num)]
+    
+    if phone_num in phone_numbers:
+    	return names[phone_numbers.index(phone_num)]
+    else:
+        return ''
 
 
 print(reverse_lookup_lists('416-555-6543', ['416-555-3498', \

@@ -78,7 +78,7 @@ class RectangleCollection:
         # your code goes here.
         for index, rectangle in enumerate(self.rectangles):
             if rectangle.get_area() == area:
-                results.append('r'+str(index))
+                results.append(rectangle)
         
         return results
     
